@@ -1,0 +1,175 @@
+@font-face {
+    font-family: logo;
+    src: url(./Fonts/AGRESSIVE.otf);
+  }
+
+  @font-face {
+    font-family: productsans;
+    src: url(./Fonts/ProductSans-Bold.ttf) format("truetype");
+  }
+
+  /* .mainbutn:hover{
+    background-color: white;
+    color: black;
+} */
+#Mlink:hover{
+    background-color: white;
+    color: black;
+    border: 2.5px solid black;
+}
+/* #mainbutn{
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+} */
+
+#Mlink{
+    transition: background-color 0.3s, color 0.3s;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 26px;
+    padding-left: 26px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: productsans;
+    font-size: 30px;
+    margin-left: 0px;
+    margin-right: 9px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+#Mlink2:hover{
+    background-color: white;
+    color: black;
+    border: 2.5px solid black;
+}
+
+#Mlink2{
+    transition: background-color 0.3s, color 0.3s;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: productsans;
+    font-size: 30px;
+    margin-left: 0px;
+    margin-right: 9px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+
+.alpha{
+    font-family: logo;
+    font-size: 35px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.Logo {
+font-family: logo;
+margin-top: 20px;
+}
+
+.Navlink {
+    font-family: productsans;
+}
+
+#bnc:hover{
+    color: rgb(0, 42, 255);
+    transform: translateY(-8px);
+}
+
+#bnc{
+    transition: transform 0.3s;
+    /* text-decoration: none; */
+    letter-spacing: 1px;
+    color: black;
+
+}
+
+#bc:hover{
+    color: blue;
+}
+#bc{
+    color: black;
+}
+
+
+
+
+
+.hoverrr:hover {
+   /* color: rgb(0, 42, 255); */
+   transform: translateY(-8px);
+   
+   /* font-size: 15px; */
+   /* border-bottom: 2px solid black; */
+}
+
+.hoverrr {
+    transition: transform 0.3s, border-bottom 0.1s;
+    color: black;
+}
+/* .hover-line::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: blue;
+    transition: width .3s;
+}
+
+.hover-line:hover::after{
+    width: 100%;
+    transition: width .3s;
+} */
+
+.lgot:hover{
+    /* transform: translateY(-8px); */
+background-color: rgba(255, 255, 255, 0);
+color: black;
+border: 2.5px solid black;
+}
+.lgin:hover{
+    /* transform: translateY(-8px); */
+    background-color: rgba(255, 255, 255, 0);
+color: black;
+border: 2.5px solid black;
+}
+.lgot{
+    border: 2.5px solid black;
+    color: white;
+    background-color:black;
+    /* padding-bottom: 9px; */
+    /* height: 60px; */
+}
+.lgin{
+    transition: transform 0.3s, backgrond-color 0.3s;
+    border: 2.5px solid black;
+    color: white;
+    background-color:black;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 5.5px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.reg{
+    transition:  backgrond-color 0.5s;
+    color: black;
+    border: 2.5px solid black;
+    
+}
+.reg:hover{
+    /* transform: translateY(-8px); */
+    color: white;
+    background-color:black
+}
+
