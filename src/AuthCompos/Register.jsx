@@ -4,7 +4,7 @@ import { Button, Container, Grid, TextField, Paper} from "@mui/material";
 import { regauth } from "../ReduxItems/AuthSlice";
 import { useDispatch } from "react-redux";
 // import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 // const VisuallyHiddenInput = styled("input")({
 //   clip: "rect(0 0 0 0)",
 //   clipPath: "inset(50%)",
