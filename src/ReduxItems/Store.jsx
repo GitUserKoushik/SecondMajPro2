@@ -8,6 +8,7 @@ import TeamSlice from "./TeamSlice";
 import CommentSlice from "./CommentSlice";
 
 
+
  export const Store = configureStore({
     reducer:{
         Auth: AuthSlice.reducer,

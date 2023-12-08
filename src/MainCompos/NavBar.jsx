@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from "react-toastify";
 
+
 const NavBar = () => {
     let logOut = ()=>{
         localStorage.removeItem("token");

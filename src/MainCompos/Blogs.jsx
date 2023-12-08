@@ -11,7 +11,7 @@ const dispatch = useDispatch();
 
 useEffect(()=>{
   dispatch(blogs());
-},[]);
+},[dispatch]);
 
 // console.log(blogs);
 

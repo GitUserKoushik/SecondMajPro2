@@ -4,6 +4,7 @@ import phone from '../Images/phone.png';
 import wapp from '../Images/wap.png';
 import Footer from './Footer';
 
+
 export default function Contacts() {
   return (
     <div>

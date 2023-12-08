@@ -15,15 +15,15 @@ export default function Home() {
 const dispatch = useDispatch();
 useEffect(()=>{
   dispatch(testm());
-},[]);
+},[dispatch]);
 
 useEffect(()=>{
   dispatch(service());
-},[]);
+},[dispatch]);
 
 useEffect(()=>{
   dispatch(team());
-},[]);
+},[dispatch]);
 
 
 const {items} = useSelector((state)=>state?.Test);

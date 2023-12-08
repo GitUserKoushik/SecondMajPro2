@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TextField } from '@mui/material'
-import axios from 'axios';
+// import axios from 'axios';
 import {Paper} from '@mui/material';
 
 export default function Searchpost() {

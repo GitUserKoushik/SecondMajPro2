@@ -6,6 +6,7 @@ let axiosInstance = axios.create({
   baseURL,
 });
 
+
 export { mainUrl };
 // export const image = (media) => {
 //   return `https://wtsacademy.dedicateddevelopers.us/uploads/product/${media}`;

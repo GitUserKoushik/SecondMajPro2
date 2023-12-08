@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { UseSelector, useSelector } from 'react-redux/es/hooks/useSelector'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 import { course } from '../ReduxItems/CourseSlice'
 import { Grid,Paper } from '@mui/material';
 import { Link } from 'react-router-dom'
@@ -10,7 +10,7 @@ export default function Courses() {
 
   useEffect(()=>{
     dispatch(course());
-  },[]);
+  },[dispatch]);
 
 const {items} = useSelector((state)=>state?.Course);
   

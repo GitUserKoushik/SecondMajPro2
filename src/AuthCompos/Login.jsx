@@ -3,7 +3,7 @@ import React from "react";
 import Button from '@mui/material/Button';
 import { useDispatch, useSelector } from "react-redux";
 import { logauth } from "../ReduxItems/AuthSlice";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom'
 
 
