@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useForm } from "react-hook-form";
 // import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
@@ -6,7 +6,7 @@ import { apply } from '../ReduxItems/CourseSlice'
 import { useDispatch } from 'react-redux'
 import { Button, Container, Grid, TextField, Paper} from "@mui/material";
 // import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 // const VisuallyHiddenInput = styled("input")({
 //   clip: "rect(0 0 0 0)",
 //   clipPath: "inset(50%)",

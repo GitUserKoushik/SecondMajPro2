@@ -1,6 +1,6 @@
 import React  from 'react'
 import { crtcmnt } from '../ReduxItems/CommentSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch,} from 'react-redux'
 import Button from '@mui/material/Button';
 // import { Link } from 'react-router-dom'
 import {
@@ -37,7 +37,7 @@ const submit = (data) => {
   };
 
 
-    const {items} = useSelector((state)=> state?.CrtCmnt);
+ 
 
 
   return (

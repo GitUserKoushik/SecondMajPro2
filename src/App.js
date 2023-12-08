@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import UniversalStyle from './UniversalStyle.css';
 import { Suspense,lazy } from 'react';
@@ -7,7 +7,7 @@ import Blogs from './MainCompos/Blogs'
 import Courses from './MainCompos/Courses'
 import Contacts from './MainCompos/Contacts';
 import NavBar from './MainCompos/NavBar';
-import Footer from './MainCompos/Footer'
+// import Footer from './MainCompos/Footer'
 import ApplyCourse from './MainCompos/ApplyCourse';
 import CommnetCrt from './MainCompos/CommnetCrt';
 import Searchpost from './MainCompos/Searchpost';
@@ -33,6 +33,8 @@ return token!== null && token!== undefined? (
 
 }
 
+let style = {UniversalStyle};
+console.log(style);
 
 
 

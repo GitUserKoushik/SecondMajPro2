@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { toast } from "react-toastify";
 
 
+
 const NavBar = () => {
     let logOut = ()=>{
         localStorage.removeItem("token");
@@ -45,7 +46,7 @@ const NavBar = () => {
             <div style={{alignItems:"center",}} >
                 {localStorage.token?<>
                 <button className='lgot' style={{textDecoration:"none",letterSpacing:"1px",height:"35px",
-               fontWeight:"700",paddingLeft:"15px",paddingRight:"15px",height:"37px",borderRadius:"10px",paddingTop:"0px",alignSelf:"center",marginTop:"3px"}}  onClick={logOut} >
+               fontWeight:"700",paddingLeft:"15px",paddingRight:"15px",borderRadius:"10px",paddingTop:"0px",alignSelf:"center",marginTop:"3px"}}  onClick={logOut} >
                 Logout
                 </button>
                 </>:<>
