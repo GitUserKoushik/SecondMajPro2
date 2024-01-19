@@ -1,7 +1,7 @@
 import { createAsyncThunk,createSlice } from "@reduxjs/toolkit";
 import axiosInstance from "./Helper";
 import { toast } from "react-toastify";
-import { Navigate, redirect, useNavigate } from "react-router-dom";
+import { redirect,} from "react-router-dom";
 
 
 

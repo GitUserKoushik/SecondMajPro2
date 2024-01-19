@@ -1,12 +1,12 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import mail from '../Images/maillogo.png';
 import phone from '../Images/phone.png';
 import wapp from '../Images/wap.png';
 import Footer from './Footer';
 import { Button,  Grid, TextField, Paper} from "@mui/material";
-import  contacts  from '../ReduxItems/AuthSlice';
+// import  contacts  from '../ReduxItems/AuthSlice';
 import Navbar from './NavBar'
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -21,7 +21,7 @@ export default function Contacts() {
     formState: { errors },
   } = useForm();
 
-  const dispatchh = useDispatch();
+  // const dispatchh = useDispatch();
 
   async function Submit (data) {
     let axurl = "https://restapinodejs.onrender.com/api/contact/create";

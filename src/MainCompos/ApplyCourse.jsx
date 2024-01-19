@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 // import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 // import { apply } from '../ReduxItems/CourseSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import {  useSelector } from 'react-redux'
 import { Button, Container, Grid, TextField, Paper} from "@mui/material";
 import { toast } from 'react-toastify';
 import axios from 'axios';
@@ -27,7 +27,7 @@ export default function ApplyCourse() {
         handleSubmit,
         formState: { errors },
       } = useForm();
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
  
 
@@ -37,7 +37,7 @@ let arr = ["6581d67a8b1a2fc045abc53f","6581d5d08b1a2fc045abc4f8","6581d3ba8b1a2f
 
 
 
-    const {items} = useSelector((state)=>state?.Course);
+    // const {items} = useSelector((state)=>state?.Course);
     
     async function Loginacc (data){
       console.log(idd);

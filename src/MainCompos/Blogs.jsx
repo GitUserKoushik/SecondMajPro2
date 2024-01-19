@@ -4,10 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Paper } from '@mui/material';
 import { Link } from 'react-router-dom'
 import NavBar from './NavBar';
-import { TextField } from '@mui/material'
+// import { TextField } from '@mui/material'
 import { useState } from 'react';
-import axios from 'axios';
-import { search } from '../ReduxItems/BlogSlice';
+// import axios from 'axios';
+// import { search } from '../ReduxItems/BlogSlice';
 
 
 export default function Blogs() {
@@ -20,17 +20,17 @@ const dispatch = useDispatch();
 
 const {items,}= useSelector((state)=>state.Blogss);
 // const {toggle} = useSelector((state)=>state.Blogss);
-const {searchItems} = useSelector((state)=>state.Blogss);
+// const {searchItems} = useSelector((state)=>state.Blogss);
 console.log("fetching blogs");
 // console.log(blogItems);
 
-const [txt,setTxt]= useState("");
+// const [txt,setTxt]= useState("");
 // const [data,setData] = useState([]);
-const [tgl,setTgl] = useState(false);
+// const [tgl,setTgl] = useState(false);
 
-const txtoc = (e)=>{
-  setTxt(e.target.value)
-  }
+// const txtoc = (e)=>{
+//   setTxt(e.target.value)
+//   }
 
  
   useEffect(()=>{
@@ -71,7 +71,7 @@ const txtoc = (e)=>{
 <h2>
         You can search your own topic
       </h2>
-      <button style={{backgroundColor:"blue",border:"1px solid blue",color:"white",borderRadius:"10px",height:"50px",width:"130px",fontSize:"20px",fontSize:"25px"}} >
+      <button style={{backgroundColor:"blue",border:"1px solid blue",color:"white",borderRadius:"10px",height:"50px",width:"130px",fontSize:"25px"}} >
         <Link to='/Searchpost' style={{textDecoration:"none", color:"white"}}>
         Search
         </Link>

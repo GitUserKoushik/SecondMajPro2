@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Blogs from './MainCompos/Blogs'
 import Courses from './MainCompos/Courses'
 import Contacts from './MainCompos/Contacts';
-import NavBar from './MainCompos/NavBar';
+// import NavBar from './MainCompos/NavBar';
 // import Footer from './MainCompos/Footer'
 import ApplyCourse from './MainCompos/ApplyCourse';
 import CommnetCrt from './MainCompos/CommnetCrt';
