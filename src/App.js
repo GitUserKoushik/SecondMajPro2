@@ -85,9 +85,9 @@ const PublicRouteNames = [
 
   return (
     <div className="App">
-      <Suspense fallback={<h2> Loading....</h2>}>
+      <Suspense  fallback={<h2> Loading....</h2>}>
         <Router>
-          <NavBar/>
+          
           <Routes>
 
             {PublicRouteNames?.map((route,index)=>{

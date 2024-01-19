@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { TextField } from '@mui/material'
 // import axios from 'axios';
 import {Paper} from '@mui/material';
+import NavBar from './NavBar';
 
 export default function Searchpost() {
 const [txt,setTxt]= useState("");
@@ -19,7 +20,8 @@ const search =(txtarg)=>{
 
   return (
     <div>
-      <div style={{display:"flex",justifyContent:"center",columnGap:"10px"}}>
+      <NavBar/>
+      <div style={{display:"flex",marginTop:"50px",justifyContent:"center",columnGap:"10px"}}>
         <TextField style={{width:"55%",borderRadius:"95px"}} value={txt} onChange={txtoc} label="Search your topic here">
 
         </TextField>
@@ -27,6 +29,12 @@ const search =(txtarg)=>{
             Search
         </button>
       </div>
+
+      <h2>
+        Suggested words - JavaScript, Python, Node, MongoDB, Variables, DOM etc
+      </h2>
+
+     
       
 <div>
     {Array.isArray(data)&& data?.map((elems,index)=>{
@@ -37,6 +45,7 @@ const search =(txtarg)=>{
            <h1 key={index} style={{color:"blue"}}>
              {elems.title}
            </h1>
+           <img style={{height:"150px",width:"220px",borderRadius:"25px"}} src={`https://restapinodejs.onrender.com/api/blog/image/${elems._id}`} alt="" />   
            <p  dangerouslySetInnerHTML={{
                  __html: elems.postText,
                }}>

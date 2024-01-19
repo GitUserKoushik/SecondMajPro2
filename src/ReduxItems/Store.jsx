@@ -6,7 +6,7 @@ import ServiceSlice from "./ServiceSlice";
 import CourseSlice from "./CourseSlice";
 import TeamSlice from "./TeamSlice";
 import CommentSlice from "./CommentSlice";
-
+import {ConSlice} from "./AuthSlice";
 
 
  export const Store = configureStore({
@@ -18,6 +18,7 @@ import CommentSlice from "./CommentSlice";
         Course : CourseSlice.reducer,
         TeamMems: TeamSlice.reducer,
         CrtCmnt : CommentSlice.reducer,
+        ConCre : ConSlice.reducer,
     },
 });
 

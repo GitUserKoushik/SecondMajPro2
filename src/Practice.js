@@ -55,22 +55,20 @@ function high(arr){
 high([2,3,4,5,6,7,8,9]);
 // 
 function prime(arr){
-    let count = 0;
     let primenum = arr.filter((data)=>{
-        for(let a = 1;a<=data;a++){
+        for(let a = 2;a<data;a++){
             if(data%a==0){
-                count++;
+                return false;
             }
-            
+           
         }
-        if(count==2){
-            return data;
-        }
+        return data!==1;
        
     })
+    console.log("Primenum");
     console.log(primenum);
 }
-prime([2,3,4,5,6,7,8,9])
+prime([2,3,4,5,6,7,8,9,11,13,17,18])
 // 
 function sorting (arr){
     let sorted = arr.sort((a,b)=>{
@@ -113,7 +111,7 @@ bignum(2,3,9,8,5,6,7,4,34,56);
 function final(...arr){
     let comboarr = [].concat(...arr);
     console.log(comboarr);
-}
+} 
 final([2,3,4,5],[3,4,5,6],[4,5,6,7]);
 // 
 function lenarr (...arr){

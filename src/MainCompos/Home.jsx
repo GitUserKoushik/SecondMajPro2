@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Grid,Paper } from '@mui/material'
 import { useEffect } from 'react'
 import Footer from './Footer'
+import NavBar from './NavBar'
 
 
 export default function Home() {
@@ -29,6 +30,8 @@ useEffect(()=>{
 const {items} = useSelector((state)=>state?.Test);
 const {serves} = useSelector((state)=> state?.Serve);
 const {teams} = useSelector((state)=>state?.TeamMems);
+const se = useSelector((state)=>state.Auth)
+  console.log(se);
 console.log("testimonials");
 console.log(items);
 
@@ -42,6 +45,8 @@ console.log(items);
 
 
   return (
+    <>
+    <NavBar/>
     <div>
      
       <div style={{display:"flex",justifyContent:"center",marginLeft:"20px",columnGap:"85px"}}>
@@ -80,7 +85,7 @@ console.log(items);
           {Array.isArray(serves) && serves?.map((elems,index)=>{
             return(
               <Grid item xs={2} sm={4} md={4}  key={index}>
-                <Paper variant='outlined' elevation={5} square={false}  sx={{ padding: 2 }}  style={{height:"300px",width:"350px",backgroundColor:"#daedff",marginLeft:"25px",marginBottom:"50px",border:"0px solid #649fd6",borderRadius:"25px",}}>
+                <Paper  elevation={10} square={false}  sx={{ padding: 2 }}  style={{height:"300px",width:"350px",backgroundColor:"#e5ecef",marginLeft:"25px",marginBottom:"50px",border:"0px dotted black",borderRadius:"25px",}}>
                  <h2 style={{color:"blue"}}>
                  {elems.name}
                  </h2>
@@ -181,8 +186,8 @@ console.log(items);
           
             
               <Grid item xs={2} sm={4} md={4}>
-                <Paper elevation={20} sx={{ padding: 2 }} style={{height:"450px",marginLeft:"40px",width:"320px",backgroundColor:"#31495f",borderRadius:"20px",border:"5px solid grey",marginBottom:"50px"}}>
-                <img src="https://restapinodejs.onrender.com/api/testimonials/photo/649ae214eac9521c7ef294dc"  style={{height:"70px",width:"70px",borderRadius:"100px"}} alt="" />
+                <Paper elevation={20} sx={{ padding: 2 }} style={{height:"450px",marginLeft:"40px",width:"320px",backgroundColor:"#3e5a74",borderRadius:"20px",border:"8px solid lightgrey",outline:"0.5px dotted black",marginBottom:"50px"}}>
+                <img src={`https://restapinodejs.onrender.com/api/testimonials/photo/${elems._id}`}  style={{height:"70px",width:"70px",borderRadius:"100px"}} alt="" />
               <h3 style={{color:"white",textAlign:"center"}}>
               {elems.name}
              </h3>
@@ -219,7 +224,7 @@ console.log(items);
         </h1>
         </div>
 
-        <Grid container spacing={{ xs: 1, md: 1 }}  style={{width:"96%"}} columns={{ xs: 4, sm: 8, md: 12 }}>
+        <Grid  container spacing={{ xs: 1, md: 1 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           {Array.isArray(teams)&& teams?.map((elems,index)=>{
             return(
               <>
@@ -228,7 +233,7 @@ console.log(items);
                 {/* <Paper elevation={10} sx={{ padding: 2 }} style={{height:"290px",marginLeft:"40px",width:"250px",backgroundColor:"#bee5d2",border:"6px solid #00ab58",borderRadius:"20px",marginBottom:"50px"}}> */}
 
 
-                  <img src="https://restapinodejs.onrender.com/api/team/photo/649bb8ccddaf1e0cdd863956" style={{height:"130px",width:"130px",borderRadius:"15px",marginTop:"50px"}} alt="" />
+                  <img src={`https://restapinodejs.onrender.com/api/team/photo/${elems._id}`} style={{height:"130px",width:"130px",borderRadius:"15px",marginTop:"50px"}} alt="" />
                   <h3 style={{color:"blue",textAlign:"center"}}>
               {elems.name}
              </h3>
@@ -265,5 +270,6 @@ console.log(items);
         <Footer/>
 
     </div>
+    </>
   )
 }

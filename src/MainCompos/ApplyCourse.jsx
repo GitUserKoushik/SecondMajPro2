@@ -2,9 +2,11 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 // import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import { apply } from '../ReduxItems/CourseSlice'
-import { useDispatch } from 'react-redux'
+// import { apply } from '../ReduxItems/CourseSlice'
+import { useDispatch, useSelector } from 'react-redux'
 import { Button, Container, Grid, TextField, Paper} from "@mui/material";
+import { toast } from 'react-toastify';
+import axios from 'axios';
 // import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 // import { styled } from '@mui/material/styles';
 // const VisuallyHiddenInput = styled("input")({
@@ -29,38 +31,49 @@ export default function ApplyCourse() {
 
  
 
-    const { id } = useParams();
+    const  idd  = useParams();
+
+let arr = ["6581d67a8b1a2fc045abc53f","6581d5d08b1a2fc045abc4f8","6581d3ba8b1a2fc045abc428","6581cf868b1a2fc045abc25a","65427d9959b2fb42d8aa9ada","64b4e2b927f4644a0a6817d0","649ad99deac9521c7ef293f6","649ad953eac9521c7ef293ee","649ad864eac9521c7ef293dd","649ad824eac9521c7ef293d8","649ad7deeac9521c7ef293d4"];
+
+
+
+    const {items} = useSelector((state)=>state?.Course);
     
-    // const Loginacc = (data)=>{
-    //   const formData = {
-    //     name: data.name,
-    //     email: data.email,
-    //     phone:data.phone,
-    //     city:data.city,
-    //     address:data.address,
-    //     qualification:data.qualification,
-    //     programing_knowledge:data.programing_knowledge,
-    //     experiance:data.experiance,
+    async function Loginacc (data){
+      console.log(idd);
+      console.log(arr[idd.id]);
+      // console.log(items[idd.id]._id);
+      const formData = {
+        name: data.name,
+        email: data.email,
+        phone:data.phone,
+        city:data.city,
+        address:data.address,
+        qualification:data.qualification,
+        programing_knowledge:data.programing_knowledge,
+        experiance:data.experiance,
 
-    //   }
-    //   dispatch(apply(formData));
-    // }
+      }
+      // dispatch(apply(formData,items[idd.id]._id));  
+      await axios.post(`https://restapinodejs.onrender.com/api/course/apply/${arr[idd.id]}`,formData);
+      toast.success("Applied for Course");
 
-    const Loginacc = (data)=>{
-      let formData = new FormData();
-      formData.append("name",data.name);
-      formData.append("email",data.email);
-      formData.append("phone",data.phone);
-      formData.append("city",data.city);
-      formData.append("address",data.address);
-      formData.append("qualification",data.qualification);
-      formData.append("programing_knowledge",data.programing_knowledge);
-      formData.append("experiance",data.experiance);
-      // formData.append("id",id)
-
-      dispatch(apply(formData,id));
-
+      
     }
+
+//     const Loginacc = (data)=>{
+//       let formData = new FormData();
+//       formData.append("name",data.name);
+//       formData.append("email",data.email);
+//       formData.append("phone",data.phone);
+//       formData.append("city",data.city);
+//       formData.append("address",data.address);
+//       formData.append("qualification",data.qualification);
+//       formData.append("programing_knowledge",data.programing_knowledge);
+//       formData.append("experiance",data.experiance);
+
+//       dispatch(apply(formData)); 
+// }
 
 
 
@@ -75,7 +88,7 @@ export default function ApplyCourse() {
         
         <Grid item sm={6}  style={{borderRadius:"25px"}}>
             <TextField
-            style={{[`& fieldset`]:{borderRadius:30}}}
+            // style={{[`& fieldset`]:{borderRadius:30}}}
             // style={{borderRadius:"15px",border:"1px solid black",height:"50px",width:"92%",paddingLeft:"30px"}}
             // placeholder='Name'
             label="Name"

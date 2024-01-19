@@ -27,7 +27,7 @@ export default function Register() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
+ 
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
@@ -52,7 +52,7 @@ export default function Register() {
     <Container style={{}}>
       <h1 style={{textAlign:"center"}}>Register</h1>
       <form onSubmit={handleSubmit(onSubmit)} style={{marginLeft:"120px"}}>
-      <Paper elevation={5}  sx={{ padding: 5 }}style={{marginTop:"70px",borderRadius:"15px",marginRight:"120px",border:"1px solid grey"}}>
+      <Paper elevation={5}  sx={{ padding: 5 }}style={{marginTop:"70px",borderRadius:"15px",marginBottom:"20px",marginRight:"120px",border:"1px solid grey"}}>
         <Grid container maxWidth={1100} spacing={2}>
         
         <Grid item sm={6}>
@@ -119,6 +119,9 @@ export default function Register() {
         </Grid>
         </Paper>
       </form>
+      <Link style={{fontSize:"30px"}} to="/">
+Go to Home
+</Link>
     </Container>
     </div>
   );

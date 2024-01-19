@@ -11,6 +11,7 @@ import {
     Typography,
   } from "@mui/material";
   import { useForm } from "react-hook-form";
+import NavBar from './NavBar';
   // import { toast } from "react-toastify";
 
 
@@ -42,6 +43,7 @@ const submit = (data) => {
 
   return (
     <div>
+      <NavBar/>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} sx={{ margin: "0 auto" }}>
           <Paper elevation={6}  sx={{ padding: 2 }} style={{marginTop:"80px",borderRadius:"20px",border:"1px solid grey"}}>

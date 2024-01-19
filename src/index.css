@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: rgb(241, 241, 241); */
+
   /* color:#435dc5 */
   font-family: productsans;
 }
@@ -21,4 +21,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
     color: #00ab58
+}
+random{
+  background-color: #f6d4ac;
+  background-color: #e5ecef;
+  background-color: #ffa600;
+  background-color: #3e5a74;
 }

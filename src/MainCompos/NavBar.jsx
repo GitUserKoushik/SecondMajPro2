@@ -1,13 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { render } from 'react-dom';
 import { Link } from 'react-router-dom'
 import { toast } from "react-toastify";
+import { useDispatch, useSelector } from 'react-redux'
+import { team } from '../ReduxItems/TeamSlice'
 
 
 
 const NavBar = () => {
+
+
+
+// let auth = localStorage.getItem("token");
+// useEffect(()=>{
+    
+// },[auth]);
+
+// const se = useSelector((state)=>state.Auth)
+//   console.log(se);
+
+
+const [upstate]= useState(localStorage.getItem("token")?true:false);
+// console.log("upstate",upstate);
+
+// let auth = localStorage.getItem("token");
+
+
+
+
+
+
+// if(auth){
+//     setUpstate(true)
+// }
+// else{
+//     setUpstate(false)
+// }
+
+
+// useEffect(()=>{
+//     setUpstate(localStorage.token?true:false);
+//     console.log("useeffect");
+// },[])
+
+
+
+
+
+
     let logOut = ()=>{
         localStorage.removeItem("token");
-        window.location.reload();
+        window.location.replace("Login");
         toast.success("Logout successful")
         
         }
@@ -24,7 +67,7 @@ const NavBar = () => {
             </Link>
 
             <div id='bnc'>
-                {localStorage.token? <Link id='bc' style={{textDecoration:"none",color:"black"}}  to="/Blogs">
+                {upstate? <Link id='bc' style={{textDecoration:"none",color:"black"}}  to="/Blogs">
                 Blogs
             </Link>:<></>}
            
